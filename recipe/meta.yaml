@@ -1,0 +1,25 @@
+{% set version = "0.0.1" %}
+
+package:
+  name: ocean
+  version: {{ version }}
+
+source:
+  path: ../
+
+build:
+  # noarch: python
+  # number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+  entry_points: 
+
+requirements:
+  build:
+    - python 3.9
+    - setuptools
+  run:
+    - python
+
+test:
+  # imports:
+  #   - pytest
